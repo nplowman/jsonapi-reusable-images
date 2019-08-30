@@ -1,0 +1,6 @@
+jsonapi_resizable_images.get_image:
+  path: '/resizable-images/{fid}/{filename}'
+  defaults:
+    _controller: '\Drupal\jsonapi_resizable_images\Controller\ImageController::getImage'
+  requirements:
+    _permission: 'access content'

@@ -1,0 +1,18 @@
+<?php
+
+use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\Core\Field\BaseFieldDefinition;
+use Drupal\jsonapi_resizable_images\ResizableImageComputedField;
+
+/**
+ * Implements hook_entity_base_field_info_alter().
+ */
+function jsonapi_resizable_images_entity_base_field_info_alter(&$fields, EntityTypeInterface $entity_type) {
+  if ($entity_type->id() === "file") {
+    $fields['resizable_image_url'] = BaseFieldDefinition::create('string')
+      ->setName('resizable_image_url')
+      ->setLabel(t('Resizable Image URL'))
+      ->setComputed(TRUE)
+      ->setClass(ResizableImageComputedField::class);
+  }
+}

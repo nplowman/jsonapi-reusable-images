@@ -1,0 +1,6 @@
+name: JSON:API Resizable Images
+description: Provides additional URL for Image entities that allows for on-the-fly scaling and cropping.
+package: Custom
+
+type: module
+core: 8.x
