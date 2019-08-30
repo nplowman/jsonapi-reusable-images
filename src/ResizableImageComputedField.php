@@ -25,7 +25,8 @@ class ResizableImageComputedField extends FielditemList implements FieldItemList
   private function getSupportedTypes() {
     return [
       'image/jpeg',
-      'image/png'
+      'image/png',
+      'image/gif'
     ];
   }
 
